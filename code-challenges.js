@@ -85,7 +85,7 @@ const noVowels = (str) => {
     // Return only values where an index number exist within the vowels array using .indexOf (i.e. index # less than 0)
     return vowels.indexOf(value) < 0
   })
-  // Return the split array and join back together thru .join and convert back to string thru .toString
+  // Return the split array and join back together thru .join and convert back to string thru .join
   return filteredArray.join("")
 }
 
@@ -132,10 +132,10 @@ var toonimals = [ {name: "Itchy", animal: "mouse"}, {name: "Stimpy", animal: "ca
 
 // Declare function that takes in an array as an argument
 const catsOnly = (arr) => {
-  // Filter through array using index
-  return arr.filter((value, index) => {
-    // Return only indexe values where toonimals[index].animal equals "cat"
-    return arr[index].animal === "cat"
+  // Filter through array using value
+  return arr.filter(value => {
+    // Return only index values where value.animal equals "cat"
+    return value.animal === "cat"
   })
 }
 
@@ -147,11 +147,18 @@ console.log(catsOnly(toonimals))
 
 // Declare function that takes in an array as an argument
 const nonCatsOnly = (arr) => {
-  // Filter through array using index
-  return arr.filter((value, index) => {
-    // Return only indexe values where toonimals[index].animal equals "cat"
-    return arr[index].animal !== "cat"
+  // Filter through array using value
+  let nonCatsArray = arr.filter(value => {
+    // Return only index values where value.animal doesn't equal "cat"
+    if (value.animal !== "cat") {
+      return value
+    }
   })
+  // Return only the name of the animal from the nonCatsArray
+  return filteredArray = nonCatsArray.map(value => {
+    return value.name
+  // Join the object values into single array and place each in new line
+  }).join("\n")
 }
 
 // Run array through function to test
