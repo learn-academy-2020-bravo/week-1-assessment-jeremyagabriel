@@ -148,14 +148,10 @@ console.log(catsOnly(toonimals))
 // Declare function that takes in an array as an argument
 const nonCatsOnly = (arr) => {
   // Filter through array using value
-  let nonCatsArray = arr.filter(value => {
+  return nonCatsArray = arr.filter(value => {
     // Return only index values where value.animal doesn't equal "cat"
-    if (value.animal !== "cat") {
-      return value
-    }
-  })
-  // Return only the name of the animal from the nonCatsArray
-  return filteredArray = nonCatsArray.map(value => {
+    return value.animal !== "cat"
+  }).map(value => {
     return value.name
   // Join the object values into single array and place each in new line
   }).join("\n")
