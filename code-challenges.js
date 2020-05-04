@@ -78,15 +78,14 @@ var stringWithVowels2 = "ILoveJavaScript"
 const noVowels = (str) => {
   // Declare a local variable array that stores each vowel at a new index
   let vowels = ["a", "e", "i", "o", "u"]
-  // Declare an array as variable that will split the string's characters into individual indexes
+  // Return an array as variable that will split the string's characters into individual indexes
   let strArray = str.split("")
-  // Filter through the above new array
-  let filteredArray = strArray.filter(value => {
+  // Return filtered array through filtering through the above new array
+  return filteredArray = strArray.filter(value => {
     // Return only values where an index number exist within the vowels array using .indexOf (i.e. index # less than 0)
     return vowels.indexOf(value) < 0
-  })
-  // Return the split array and join back together thru .join and convert back to string thru .join
-  return filteredArray.join("")
+    // Join back to string through .join
+  }).join("")
 }
 
 // Run variables through function to test
@@ -108,15 +107,14 @@ const noVowelsError = (str) => {
   }
   // Declare a local variable array that stores each vowel at a new index
   let vowels = ["a", "e", "i", "o", "u"]
-  // Declare an array as variable that will split the string's characters into individual indexes
+  // Return an array as variable that will split the string's characters into individual indexes
   let strArray = str.split("")
-  // Filter through the above new array
-  let filteredArray = strArray.filter(value => {
+  // Return filtered array through filtering through the above new array
+  return filteredArray = strArray.filter(value => {
     // Return only values where an index number doesn't exist within the vowels array using .indexOf (i.e. index # less than 0)
     return vowels.indexOf(value) < 0
-  })
-  // Return the split array and join back together thru .join and convert back to string thru .toString
-  return filteredArray.join("")
+    // Join back to string through .join
+  }).join("")
 }
 
 // Run variables through function to test
